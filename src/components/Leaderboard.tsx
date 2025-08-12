@@ -3,7 +3,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Trophy, Medal, Award, Crown, TrendingUp } from "lucide-react";
+import { CircleDollarSign } from "lucide-react";
+import { Crown, Trophy, Medal, Award, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -44,8 +45,8 @@ const getRankStyle = (rank: number) => {
 const PodiumCard = ({ member, position }: { member: LeaderboardMember; position: 1 | 2 | 3 }) => {
   const heights = {
     1: "h-48",
-    2: "h-40", 
-    3: "h-36"
+    2: "h-48", 
+    3: "h-48"
   };
 
   return (
@@ -66,7 +67,7 @@ const PodiumCard = ({ member, position }: { member: LeaderboardMember; position:
           </div>
           <h3 className="font-bold text-lg mb-2">{member.name}</h3>
           <div className="flex items-center justify-center gap-2">
-            <TrendingUp className="w-4 h-4 text-success" />
+            <CircleDollarSign className="w-4 h-4 text-success" />
             <span className="text-2xl font-bold">{member.score.toLocaleString()}</span>
           </div>
           <Badge variant="secondary" className="mt-2">
@@ -102,8 +103,8 @@ const LeaderboardRow = ({ member, index }: { member: LeaderboardMember; index: n
           </div>
           <div className="text-right">
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-success" />
-              <span className="text-xl font-bold text-success">
+              <CircleDollarSign className="w-4 h-4 text-warning" />
+              <span className="text-xl font-bold text-warning">
                 {member.score.toLocaleString()}
               </span>
             </div>
