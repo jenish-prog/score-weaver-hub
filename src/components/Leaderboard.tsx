@@ -133,7 +133,14 @@ export default function Leaderboard() {
         .order('score', { ascending: false });
 
       if (error) throw error;
-      setMembers(data || []);
+
+      // Assign ranks based on sorted order
+      const rankedMembers = (data || []).map((member: any, idx: number) => ({
+        ...member,
+        rank: idx + 1,
+      }));
+
+      setMembers(rankedMembers);
     } catch (error) {
       console.error('Error fetching leaderboard:', error);
     } finally {
