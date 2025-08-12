@@ -196,18 +196,19 @@ export default function Leaderboard() {
           <p className="text-xl text-muted-foreground">
             Compete for glory and climb to the top!
           </p>
-          <Button onClick={() => navigate('/admin')} >hsgjw</Button>
-          {isAdmin && (
+            {/* Moved Admin button below the description */}
+            
             <div className="mt-6">
               <Button 
-                onClick={() => navigate('/admin')} 
-                variant="default"
-                className="bg-gradient-gold text-primary-foreground hover:scale-105 transition-transform"
+              onClick={() => navigate('/admin')} 
+              variant="default"
+              className="bg-gradient-gold text-primary-foreground hover:scale-105 transition-transform"
               >
-                Admin Panel
+              Admin Panel
               </Button>
             </div>
-          )}
+            
+          
         </div>
 
         {/* Top 3 Podium */}
