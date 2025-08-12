@@ -189,7 +189,7 @@ export default function Leaderboard() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <Crown className="w-12 h-12 text-primary animate-glow-pulse" />
             <h1 className="text-5xl font-bold bg-gradient-gold bg-clip-text text-transparent">
-              Leaderboard
+              Skill Up
             </h1>
             <Crown className="w-12 h-12 text-primary animate-glow-pulse" />
           </div>
