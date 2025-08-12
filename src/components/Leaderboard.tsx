@@ -195,7 +195,7 @@ export default function Leaderboard() {
           <p className="text-xl text-muted-foreground">
             Compete for glory and climb to the top!
           </p>
-          
+          <Button onClick={() => navigate('/admin')} >hsgjw</Button>
           {isAdmin && (
             <div className="mt-6">
               <Button 
