@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Gaming Leaderboard Design System - Dark theme with gold/silver/bronze accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark gaming background */
+    --background: 240 10% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card styling with dark gradients */
+    --card: 240 10% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary gold accent */
+    --primary: 45 100% 60%;
+    --primary-foreground: 240 10% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary silver accent */
+    --secondary: 220 15% 70%;
+    --secondary-foreground: 240 10% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Bronze accent */
+    --bronze: 25 50% 50%;
+    --bronze-foreground: 210 40% 98%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted dark colors */
+    --muted: 240 10% 15%;
+    --muted-foreground: 220 15% 60%;
 
+    /* Accent colors */
+    --accent: 240 10% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Destructive red */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs */
+    --border: 240 10% 20%;
+    --input: 240 10% 15%;
+    --ring: 45 100% 60%;
 
-    --radius: 0.5rem;
+    /* Success green for score indicators */
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    /* Gaming gradients */
+    --gradient-main: linear-gradient(135deg, hsl(240 15% 15%), hsl(240 10% 8%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 100% 45%));
+    --gradient-silver: linear-gradient(135deg, hsl(220 15% 70%), hsl(220 15% 55%));
+    --gradient-bronze: linear-gradient(135deg, hsl(25 50% 50%), hsl(25 50% 35%));
+    --gradient-card: linear-gradient(135deg, hsl(240 15% 15%), hsl(240 10% 12%));
+    
+    /* Gaming glows and shadows */
+    --glow-gold: 0 0 30px hsl(45 100% 60% / 0.5);
+    --glow-silver: 0 0 20px hsl(220 15% 70% / 0.3);
+    --glow-bronze: 0 0 20px hsl(25 50% 50% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(240 10% 3% / 0.8);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
